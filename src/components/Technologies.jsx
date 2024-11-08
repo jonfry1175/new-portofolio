@@ -13,7 +13,7 @@ const Technologies = () => {
                     <RiReactjsLine className='text-7xl text-cyan-400' />
                 </div>
                 <div className='rounded-2xl border-4 border-neutral-800 p-4'>
-                    <RiVuejsLine className="text-7xl text-green-700" />
+                    <RiVuejsLine className="text-7xl text-[#235840]" />
                 </div>
 
 
@@ -21,7 +21,7 @@ const Technologies = () => {
                     <SiExpress className='text-7xl text-[#ffc107]' />
                 </div>
                 <div className='rounded-2xl border-4 border-neutral-800 p-4'>
-                    <SiPostgresql className='text-7xl text-[#0068f]' />
+                    <SiPostgresql className='text-7xl  text-sky-400' />
                 </div>
             </div>
         </div>
