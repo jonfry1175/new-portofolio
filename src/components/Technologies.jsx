@@ -1,5 +1,5 @@
 import { RiReactjsLine, RiVuejsLine, RiNodejsLine } from "react-icons/ri"
-import { SiExpress, SiPostgresql } from "react-icons/si"
+import { SiExpress, SiPostgresql, SiCypress } from "react-icons/si"
 
 const Technologies = () => {
     return (
@@ -22,6 +22,9 @@ const Technologies = () => {
                 </div>
                 <div className='rounded-2xl border-4 border-neutral-800 p-4'>
                     <SiPostgresql className='text-7xl  text-sky-400' />
+                </div>
+                <div className='rounded-2xl border-4 border-neutral-800 p-4'>
+                    <SiCypress className='text-7xl  text-gray-400' />
                 </div>
             </div>
         </div>
