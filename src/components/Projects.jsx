@@ -16,8 +16,21 @@ const Projects = () => {
                             <h6 className="mb-2 text-2xl font-bold">{project.title}</h6>
                             <p className="text-neutral-400">{project.description}</p>
                             {project.technologies.map((tech, index) => (
-                                <span key={index} className={`mr-2 mt-4 rounded h-8  bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800`}>{tech}</span>
+                                <span key={index} className={`mr-2 mt-4 rounded h-7  bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800`}>{tech}</span>
                             ))}
+                            <br />
+                            <div className="w-full ">
+                                <a href={project.demo} target='_blank'>
+                                    <button disabled={!project.demo} className={`mt-4 rounded mr-2 h-8 bg-neutral-900 ${project.demo ? '' : 'cursor-not-allowed'} px-2 py-1 text-sm font-medium text-[#FCD34D]`}>
+                                        Demo
+                                    </button>
+                                </a>
+                                <a href={project.src} target='_blank'>
+                                    <button disabled={!project.src} className={`${project.src ? '' : 'cursor-not-allowed'} mt-4 rounded h-8 bg-neutral-900 px-2 py-1 text-sm font-medium text-[#FCD34D]`}>
+                                        Source Code
+                                    </button>
+                                </a>
+                            </div>
                         </motion.div>
                     </div>
                 ))}

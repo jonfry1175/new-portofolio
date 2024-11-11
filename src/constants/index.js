@@ -31,6 +31,8 @@ export const PROJECTS = [
     description:
       "Created a bug management website called DefectDetect using ExpressJS, PostgreSQL, JWT, ReactJS, Redux, and Bootstrap.DefectDetect has two roles: QA and Developer.QA can view and create bugs but cannot change their status.Developers can view and change the status of bugs.",
     technologies: ["TypeScript", "Express", "PostgreSQL", "Vue", "Tailwind"],
+    demo: null,
+    src: "https://github.com/jonfry1175/DefectDetect",
   },
   {
     title: "Laundry Management Website",
@@ -38,6 +40,8 @@ export const PROJECTS = [
     description:
       "Make website laundry app using react js, react-bootstrap, and redux. Laundry App to help employee to manage transaction and manage list product or service they have",
     technologies: ["JavaScript", "React", "Bootstrap"],
+    demo: "https://jonfry-laundry-app.netlify.app/",
+    src: "https://github.com/jonfry1175/enigma-laundry",
   },
   {
     title: "Portfolio Website",
@@ -45,6 +49,8 @@ export const PROJECTS = [
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
     technologies: ["Javascript", "React", "Tailwind"],
+    demo: "https://jonfry.netlify.app/",
+    src: "https://github.com/jonfry1175/new-portofolio",
   },
   {
     title: "Product Management Website",
@@ -52,6 +58,8 @@ export const PROJECTS = [
     description:
       "An web application for managing products, with features such as CRUD operations and user authentication.",
     technologies: ["JavaScript", "Express", "PostgreSQL", "React", "Bootstrap"],
+    demo: null,
+    src: "https://github.com/jonfry1175/ElektroStore",
   },
 ];
 
