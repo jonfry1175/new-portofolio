@@ -21,12 +21,12 @@ const Projects = () => {
                             <br />
                             <div className="w-full ">
                                 <a href={project.demo} target='_blank'>
-                                    <button disabled={!project.demo} className={`mt-4 rounded mr-2 h-8 bg-neutral-900 ${project.demo ? '' : 'cursor-not-allowed'} px-2 py-1 text-sm font-medium text-[#FCD34D]`}>
+                                    <button disabled={!project.demo} className={`mt-4 rounded mr-2 h-8 bg-neutral-900 ${project.demo ? 'text-[#FCD34D]' : 'text-neutral-600 cursor-not-allowed'} px-2 py-1 text-sm font-medium `}>
                                         Demo
                                     </button>
                                 </a>
                                 <a href={project.src} target='_blank'>
-                                    <button disabled={!project.src} className={`${project.src ? '' : 'cursor-not-allowed'} mt-4 rounded h-8 bg-neutral-900 px-2 py-1 text-sm font-medium text-[#FCD34D]`}>
+                                    <button disabled={!project.src} className={`${project.src ? 'text-[#FCD34D]' : 'text-neutral-600 cursor-not-allowed'} mt-4 rounded h-8 bg-neutral-900 px-2 py-1 text-sm font-medium `}>
                                         Source Code
                                     </button>
                                 </a>
