@@ -31,7 +31,7 @@ export const PROJECTS = [
     image: project3,
     description:
       "Created a website for project management",
-    technologies: ["Typescript", "Express", "PostgreSQL", "Vue", "Tailwind"],
+    technologies: ["Typescript", "Express", "PostgreSQL", "Vue", "Tailwind", "Cypress"],
     demo: null,
     src: "https://github.com/jonfry1175/flowboards",
   },
