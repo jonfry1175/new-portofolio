@@ -16,7 +16,7 @@ export const EXPERIENCES = [
     technologies: ["Typescript", "Vue.js", "Cypress", "Tailwind"],
   },
   {
-    year: "2022 - 2023",
+    year: "Feb 2024 - May 2024",
     role: "Frontend Developer Intern",
     company: "FYP Media",
     description: `Designed and developed user interfaces for web applications using React.js and Bootstrap. Worked closely with backend developers to integrate frontend components with Laravel APIs. Implemented responsive designs and optimized frontend performance.`,
