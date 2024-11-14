@@ -2,6 +2,7 @@ import project1 from "../assets/projects/project-defect.png";
 import project2 from "../assets/projects/project-enigma.png";
 import project5 from "../assets/projects/project-porto.png";
 import project4 from "../assets/projects/project-product.png";
+import project3 from "../assets/projects/project-3.jpg";
 
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With less than 1 years of hands-on experience, I have honed my skills in front-end technologies like React and Vue., as well as back-end technologies like Node.js, Express.js, and, PostgreSQL. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
@@ -26,11 +27,20 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "DefectDetect Website(on-progress)",
+    title: "Flowboards (on going)",
+    image: project3,
+    description:
+      "Created a website for project management",
+    technologies: ["Typescript", "Express", "PostgreSQL", "Vue", "Tailwind"],
+    demo: null,
+    src: "https://github.com/jonfry1175/flowboards",
+  },
+  {
+    title: "DefectDetect Website",
     image: project1,
     description:
       "Created a bug management website called DefectDetect using ExpressJS, PostgreSQL, JWT, ReactJS, Redux, and Bootstrap.DefectDetect has two roles: QA and Developer.QA can view and create bugs but cannot change their status.Developers can view and change the status of bugs.",
-    technologies: ["TypeScript", "Express", "PostgreSQL", "Vue", "Tailwind"],
+    technologies: ["Javascript", "Express", "PostgreSQL", "React", "Bootstrap"],
     demo: null,
     src: "https://github.com/jonfry1175/DefectDetect",
   },
