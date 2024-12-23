@@ -9,7 +9,7 @@ const Projects = () => {
                 {PROJECTS.map((project, index) => (
                     <div key={index} className='mb-8 flex flex-wrap lg:justify-center'>
                         <motion.div whileInView={{ x: 0, opacity: 1 }} initial={{ x: -100, opacity: 0 }} transition={{ duration: 1 }} className="w-full lg:w-1/4">
-                            <img src={project.image} alt={project.title} width={150} height={150} className='mb-6 rounded' />
+                            <img src={project.image} alt={project.title} width={project.isDesktop ? 220 : 150} height={150} className='mb-6 rounded  ' />
                         </motion.div>
 
                         <motion.div whileInView={{ x: 0, opacity: 1 }} initial={{ x: 100, opacity: 0 }} transition={{ duration: 1 }} className="w-full max-w-xl lg:w-3/4 flex flex-wrap lg:flex-none">

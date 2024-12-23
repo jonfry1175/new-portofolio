@@ -3,6 +3,7 @@ import project2 from "../assets/projects/project-enigma.png";
 import project5 from "../assets/projects/project-porto.png";
 import project4 from "../assets/projects/project-product.png";
 import project3 from "../assets/projects/project-3.jpg";
+import project7 from "../assets/projects/image.png";
 
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With less than 1 years of hands-on experience, I have honed my skills in front-end technologies like React and Vue., as well as back-end technologies like Node.js, Express.js, and, PostgreSQL. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
@@ -30,10 +31,21 @@ export const PROJECTS = [
     title: "Flowboards (on going)",
     image: project3,
     description:
-      "Created a website for project management",
+      "Created a website for project management. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     technologies: ["Typescript", "Express", "PostgreSQL", "Vue", "Tailwind", "Cypress"],
     demo: null,
-    src: "https://github.com/jonfry1175/flowboards",
+    src: null,
+    // src: "https://github.com/jonfry1175/flowboards",
+  },
+  {
+    title: "Janji Temu Website",
+    image: project7,
+    isDesktop: true,
+    description:
+      "Develop appointment website using Typescript, Express, PostgreSQL, React & Tailwind.lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    technologies: ["Typescript", "Express", "PostgreSQL", "React", "Tailwind", "Cypress"],
+    demo: null,
+    src: "https://github.com/jonfry1175/test-fullstack-healmity",
   },
   {
     title: "DefectDetect Website",
