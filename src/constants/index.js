@@ -11,7 +11,14 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 
 export const EXPERIENCES = [
   {
-    year: "Sep 2024 - Present",
+    year: "De 2025 - Present",
+    role: "Fullstack Developer",
+    company: "CV. Khalil Jaya Teknik",
+    description: `Developed IOT dashboard monitoring for CNC machines as a solo developer. Created features for file transfer to CNC machines through the website`,
+    technologies: ["TypeScript", "Node-RED", "Express", "PostgreSQL", "Vue", "Tailwind", "REST API", "WebSocket", "MQTT", "PM2"],
+  },
+  {
+    year: "Sep 2024 - Nov 2024",
     role: "Frontend Developer Intern",
     company: "ASDF.ID",
     description: `Designed API specs with backend team, developed web app using TypeScript, Vue.js, and Tailwind CSS, and integrated APIs using microfrontend architecture with unit testing end-to-end using Cypress.`,
@@ -28,14 +35,14 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "Flowboards (on going)",
+    title: "IOT Dashboard Monitoring",
     image: project3,
+    isDesktop: true,
     description:
-      "Created a website for project management. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    technologies: ["Typescript", "Express", "PostgreSQL", "Vue", "Tailwind", "Cypress"],
+      "Developed IOT dashboard monitoring for CNC machines as a solo developer. Created features for file transfer to CNC machines through the website. Implemented full stack solution using TypeScript, Express, PostgreSQL, Vue, Tailwind, REST API, WebSocket, and MQTT protocols.",
+    technologies: ["TypeScript", "Express", "PostgreSQL", "Vue", "Tailwind", "REST API", "WebSocket", "MQTT"],
     demo: null,
     src: null,
-    // src: "https://github.com/jonfry1175/flowboards",
   },
   {
     title: "Janji Temu Website",
