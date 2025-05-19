@@ -5,17 +5,47 @@ import project4 from "../assets/projects/project-product.png";
 import project3 from "../assets/projects/project-3.jpg";
 import project7 from "../assets/projects/image.png";
 
+export interface Experience {
+  year: string;
+  role: string;
+  company: string;
+  description: string;
+  technologies: string[];
+}
+
+export interface Project {
+  title: string;
+  description: string;
+  image: string;
+  github?: string;
+  demo?: string;
+  technologies: string[];
+  isDesktop?: boolean;
+  src?: string;
+}
+
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With less than 1 years of hands-on experience, I have honed my skills in front-end technologies like React and Vue., as well as back-end technologies like Node.js, Express.js, and, PostgreSQL. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With less than 1 years of professional experience, I have worked with a variety of technologies, including React.js, Vue.js, Node.js, PostgreSQL, and Cypress. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active and staying up-to-date with the latest industry trends by exploring new technologies.`;
 
-export const EXPERIENCES = [
+export const EXPERIENCES: Experience[] = [
   {
     year: "De 2025 - Present",
     role: "Fullstack Developer",
     company: "CV. Khalil Jaya Teknik",
     description: `Developed IOT dashboard monitoring for CNC machines as a solo developer. Created features for file transfer to CNC machines through the website`,
-    technologies: ["TypeScript", "Node-RED", "Express", "PostgreSQL", "Vue", "Tailwind", "REST API", "WebSocket", "MQTT", "PM2"],
+    technologies: [
+      "TypeScript",
+      "Node-RED",
+      "Express",
+      "PostgreSQL",
+      "Vue",
+      "Tailwind",
+      "REST API",
+      "WebSocket",
+      "MQTT",
+      "PM2",
+    ],
   },
   {
     year: "Sep 2024 - Nov 2024",
@@ -33,16 +63,25 @@ export const EXPERIENCES = [
   },
 ];
 
-export const PROJECTS = [
+export const PROJECTS: Project[] = [
   {
     title: "IOT Dashboard Monitoring",
     image: project3,
     isDesktop: true,
     description:
       "Developed IOT dashboard monitoring for CNC machines as a solo developer. Created features for file transfer to CNC machines through the website. Implemented full stack solution using TypeScript, Express, PostgreSQL, Vue, Tailwind, REST API, WebSocket, and MQTT protocols.",
-    technologies: ["TypeScript", "Express", "PostgreSQL", "Vue", "Tailwind", "REST API", "WebSocket", "MQTT"],
-    demo: null,
-    src: null,
+    technologies: [
+      "TypeScript",
+      "Express",
+      "PostgreSQL",
+      "Vue",
+      "Tailwind",
+      "REST API",
+      "WebSocket",
+      "MQTT",
+    ],
+    demo: "",
+    src: "",
   },
   {
     title: "Janji Temu Website",
@@ -50,8 +89,15 @@ export const PROJECTS = [
     isDesktop: true,
     description:
       "Develop appointment website using Typescript, Express, PostgreSQL, React & Tailwind.lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    technologies: ["Typescript", "Express", "PostgreSQL", "React", "Tailwind", "Cypress"],
-    demo: null,
+    technologies: [
+      "Typescript",
+      "Express",
+      "PostgreSQL",
+      "React",
+      "Tailwind",
+      "Cypress",
+    ],
+    demo: undefined,
     src: "https://github.com/jonfry1175/test-fullstack-healmity",
   },
   {
@@ -60,7 +106,7 @@ export const PROJECTS = [
     description:
       "Created a bug management website called DefectDetect using ExpressJS, PostgreSQL, JWT, ReactJS, Redux, and Bootstrap.DefectDetect has two roles: QA and Developer.QA can view and create bugs but cannot change their status.Developers can view and change the status of bugs.",
     technologies: ["Javascript", "Express", "PostgreSQL", "React", "Bootstrap"],
-    demo: null,
+    demo: "",
     src: "https://github.com/jonfry1175/DefectDetect",
   },
   {
@@ -87,7 +133,7 @@ export const PROJECTS = [
     description:
       "An web application for managing products, with features such as CRUD operations and user authentication.",
     technologies: ["JavaScript", "Express", "PostgreSQL", "React", "Bootstrap"],
-    demo: null,
+    demo: "",
     src: "https://github.com/jonfry1175/ElektroStore",
   },
 ];
