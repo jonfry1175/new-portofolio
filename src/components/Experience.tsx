@@ -45,6 +45,9 @@ const Experience: React.FC = () => {
                 <span className="text-sm text-purple-100">
                   {experience.company}
                 </span>
+                <span className="ml-2 inline-block rounded-full bg-purple-800 px-3 py-1 text-xs font-medium text-white">
+                  {experience.jobType}
+                </span>
               </h6>
               <p className="mb-4 text-neutral-400">{experience.description}</p>
               {experience.technologies.map((tech: string, index: number) => (
