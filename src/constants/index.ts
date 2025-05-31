@@ -116,7 +116,7 @@ export const PROJECTS: Project[] = [
     description:
       "Built a comprehensive bug tracking system with role-based access control. QA teams can report and monitor bugs, while developers can manage and update bug statuses. Implemented secure authentication using JWT and modern frontend technologies for optimal user experience.",
     technologies: ["Javascript", "Express", "PostgreSQL", "React", "Bootstrap"],
-    demo: "",
+    demo: "https://defect-detect.vercel.app",
     src: "https://github.com/jonfry1175/DefectDetect",
   },
   {
