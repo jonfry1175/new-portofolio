@@ -41,7 +41,7 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 
 export const EXPERIENCES: Experience[] = [
   {
-    year: "Des 2025 - Present",
+    year: "Des 2024 - Present",
     role: "Fullstack Developer",
     company: "CV. Khalil Jaya Teknik",
     jobType: "Full-time",
