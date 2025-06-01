@@ -24,14 +24,14 @@ const Hero: React.FC = () => {
     <div className="border-b  pb-4 lg:mb-35">
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2">
-          <div className="flex flex-col items-center lg:items-start">
+          <div className="flex flex-col items-center lg:items-start text-center">
             <motion.h1
               variants={container(0)}
               initial="hidden"
               animate="visible"
               className="pb-16 text-4xl font-thin tracking-tight lg:mt-16 lg:text-7xl"
             >
-              Jonfry Marbun
+              Jonfry Agung Marbun
             </motion.h1>
 
             <motion.span
