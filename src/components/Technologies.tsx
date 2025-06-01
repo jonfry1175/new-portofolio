@@ -1,6 +1,11 @@
 import { RiReactjsLine, RiVuejsLine, RiNodejsLine } from "react-icons/ri";
-import { SiExpress, SiPostgresql, SiCypress } from "react-icons/si";
-import { FiZap, FiCpu } from "react-icons/fi";
+import {
+  SiExpress,
+  SiPostgresql,
+  SiCypress,
+  SiTypescript,
+} from "react-icons/si";
+import { FiZap } from "react-icons/fi";
 import { motion, Variants } from "framer-motion";
 import { IconType } from "react-icons";
 import React from "react";
@@ -49,6 +54,12 @@ const IconWithTooltip: React.FC<IconWithTooltipProps> = ({
 const Technologies: React.FC = () => {
   const technologies = [
     {
+      icon: SiTypescript,
+      color: "text-blue-600",
+      tooltip: "TypeScript",
+      duration: 2.5,
+    },
+    {
       icon: RiReactjsLine,
       color: "text-blue-500",
       tooltip: "React",
@@ -90,7 +101,6 @@ const Technologies: React.FC = () => {
       tooltip: "WebSocket",
       duration: 2.6,
     },
-    { icon: FiCpu, color: "text-purple-500", tooltip: "MQTT", duration: 2.3 },
   ];
 
   return (

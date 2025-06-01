@@ -1,8 +1,8 @@
-import project1 from "../assets/projects/project-defect.png";
+import project1 from "../assets/projects/defect.png";
 import project2 from "../assets/projects/project-enigma.png";
 import project5 from "../assets/projects/project-porto.png";
-import project3 from "../assets/projects/project-3.jpg";
-import project7 from "../assets/projects/image.png";
+import project7 from "../assets/projects/janji-temu/image.png";
+import runningTime from "../assets/projects/iot/running_time.png";
 
 export interface Experience {
   year: string;
@@ -22,6 +22,7 @@ export interface Project {
   technologies: string[];
   isDesktop?: boolean;
   src?: string;
+  isMobileImage: boolean;
 }
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 1 year of hands-on experience, I have honed my skills in front-end technologies like React and Vue, as well as back-end technologies like Node.js, Express.js, and PostgreSQL. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
 
@@ -76,7 +77,8 @@ export const EXPERIENCES: Experience[] = [
 export const PROJECTS: Project[] = [
   {
     title: "IOT Dashboard Monitoring",
-    image: project3,
+    isMobileImage: false,
+    image: runningTime,
     isDesktop: true,
     description:
       "Developed an IoT dashboard monitoring system for CNC machines as a solo developer. Implemented real-time file transfer capabilities between web interface and CNC machines. Built a full-stack solution utilizing modern technologies and protocols for efficient machine communication and monitoring.",
@@ -95,6 +97,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Janji Temu Website",
+    isMobileImage: false,
     image: project7,
     isDesktop: true,
     description:
@@ -112,6 +115,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "DefectDetect Website",
+    isMobileImage: false,
     image: project1,
     description:
       "Built a comprehensive bug tracking system with role-based access control. QA teams can report and monitor bugs, while developers can manage and update bug statuses. Implemented secure authentication using JWT and modern frontend technologies for optimal user experience.",
@@ -121,6 +125,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Laundry Management Website",
+    isMobileImage: true,
     image: project2,
     description:
       "Developed a laundry management system to streamline business operations. Features include transaction management, service catalog maintenance, and comprehensive reporting tools for business analytics.",
@@ -130,6 +135,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Portfolio Website",
+    isMobileImage: true,
     image: project5,
     description:
       "Designed and developed a modern portfolio website to showcase professional projects and technical skills. Features responsive design and interactive components for optimal user engagement.",

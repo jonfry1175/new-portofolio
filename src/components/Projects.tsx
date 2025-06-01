@@ -14,7 +14,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <div className="border-b border-neutral-800 pb-4">
+    <div className="border-b border-neutral-800 pb-12">
       <motion.h2
         variants={containerVariants}
         initial="hidden"
@@ -23,65 +23,92 @@ const Projects: React.FC = () => {
       >
         Projects
       </motion.h2>
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-16">
         {PROJECTS.map((project: ProjectType, index: number) => (
-          <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
+          <div
+            key={index}
+            className={`flex flex-col ${
+              !project.isMobileImage ? "lg:flex-row" : "lg:flex-row"
+            } gap-8 items-start`}
+          >
+            {/* Image Section */}
             <motion.div
               variants={itemVariants}
               initial="hiddenLeft"
               whileInView="visible"
-              className="w-full lg:w-1/4"
+              className={`${
+                project.isMobileImage
+                  ? "w-full lg:w-1/3 flex justify-center"
+                  : "w-full lg:w-1/2"
+              }`}
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                width={project.isDesktop ? 220 : 150}
-                height={150}
-                className="mb-6 rounded"
-              />
+              <div
+                className={`overflow-hidden rounded-lg ${
+                  !project.isMobileImage ? "w-full" : "w-auto"
+                }`}
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className={`rounded-lg ${
+                    project.isMobileImage
+                      ? "max-h-[400px] object-contain"
+                      : "w-full object-cover shadow-lg"
+                  }`}
+                  style={{
+                    border: !project.isMobileImage ? "1px solid #333" : "none",
+                    maxWidth: project.isMobileImage ? "220px" : "100%",
+                  }}
+                />
+              </div>
             </motion.div>
 
+            {/* Content Section */}
             <motion.div
               variants={itemVariants}
               initial="hiddenRight"
               whileInView="visible"
-              className="w-full max-w-xl lg:w-3/4 flex flex-wrap lg:flex-none"
+              className={`${
+                project.isMobileImage ? "w-full lg:w-2/3" : "w-full lg:w-1/2"
+              } flex flex-col`}
             >
-              <div className="w-full">
-                <h6 className="mb-2 text-2xl font-bold">{project.title}</h6>
-                <p className="text-neutral-400">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {project.technologies.map((tech: string, index: number) => (
-                    <span
-                      key={index}
-                      className="rounded h-7 bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="mt-4 flex gap-4">
-                  {project.demo && (
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="rounded bg-purple-800 px-4 py-2 text-sm font-medium text-white hover:bg-purple-700"
-                    >
-                      Live Demo
-                    </a>
-                  )}
-                  {project.src && (
-                    <a
-                      href={project.src}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="rounded bg-neutral-800 px-4 py-2 text-sm font-medium text-white hover:bg-neutral-700"
-                    >
-                      Source Code
-                    </a>
-                  )}
-                </div>
+              <h3 className="mb-4 text-2xl font-bold">{project.title}</h3>
+              <p className="mb-6 text-neutral-400 leading-relaxed">
+                {project.description}
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                {project.technologies.map((tech: string, index: number) => (
+                  <span
+                    key={index}
+                    className="rounded-full bg-neutral-900 px-4 py-1.5 text-sm font-medium text-purple-600"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex gap-4">
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-md bg-purple-800 px-5 py-2 text-sm font-medium text-white hover:bg-purple-700 transition-colors"
+                  >
+                    Live Demo
+                  </a>
+                )}
+                {project.src && (
+                  <a
+                    href={project.src}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-md border border-neutral-700 bg-neutral-900 px-5 py-2 text-sm font-medium text-white hover:bg-neutral-800 transition-colors"
+                  >
+                    Source Code
+                  </a>
+                )}
               </div>
             </motion.div>
           </div>
