@@ -64,7 +64,7 @@ export const EXPERIENCES: Experience[] = [
     role: "Frontend Developer",
     company: "ASDF.ID",
     jobType: "Internship",
-    description: `Designed API specs with backend team, developed web app using TypeScript, Vue.js, and Tailwind CSS, and integrated APIs using microfrontend architecture with unit testing end-to-end using Cypress.`,
+    description: `Participated in developing CRM sales application as part of the development team. Designed API specifications collaboratively with backend team, developed web application using TypeScript, Vue.js, and Tailwind CSS. Integrated APIs using microfrontend architecture and implemented comprehensive end-to-end testing using Cypress.`,
     technologies: ["Typescript", "Vue.js", "Cypress", "Tailwind"],
   },
   {
