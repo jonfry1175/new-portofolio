@@ -1,7 +1,10 @@
 import { PROJECTS, Project as ProjectType } from "../constants";
 import { motion, Variants } from "framer-motion";
-import React, { useState } from "react";
-import ProjectDetails from "./ProjectDetails";
+import React, { useState, lazy, Suspense } from "react";
+import LazyImage from "./LazyImage";
+
+// Lazy load ProjectDetails
+const ProjectDetails = lazy(() => import("./ProjectDetails"));
 
 const Projects: React.FC = () => {
   const [showDetails, setShowDetails] = useState(false);
@@ -69,7 +72,7 @@ const Projects: React.FC = () => {
                 }`}
                 onClick={() => handleImageClick(project)}
               >
-                <img
+                <LazyImage
                   src={project.image}
                   alt={project.title}
                   className={`rounded-lg ${
@@ -152,10 +155,21 @@ const Projects: React.FC = () => {
       </div>
 
       {showDetails && currentProject && (
-        <ProjectDetails
-          images={currentProject.detailImages}
-          onClose={closeDetails}
-        />
+        <Suspense
+          fallback={
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
+              <div className="animate-pulse flex flex-col items-center">
+                <div className="h-12 w-12 rounded-full bg-purple-600/60"></div>
+                <div className="mt-3 text-white">Loading gallery...</div>
+              </div>
+            </div>
+          }
+        >
+          <ProjectDetails
+            images={currentProject.detailImages}
+            onClose={closeDetails}
+          />
+        </Suspense>
       )}
     </div>
   );

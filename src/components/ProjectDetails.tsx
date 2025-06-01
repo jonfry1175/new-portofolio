@@ -5,6 +5,7 @@ import {
   IoChevronForwardOutline,
   IoCloseOutline,
 } from "react-icons/io5";
+import LazyImage from "./LazyImage";
 
 interface ProjectDetailsProps {
   images: string[];
@@ -14,15 +15,15 @@ interface ProjectDetailsProps {
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({ images, onClose }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  }, [images.length]);
 
-  const goToPrevious = () => {
+  const goToPrevious = useCallback(() => {
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
-  };
+  }, [images.length]);
 
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
@@ -34,7 +35,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ images, onClose }) => {
         goToPrevious();
       }
     },
-    [images.length, onClose]
+    [images.length, onClose, goToNext, goToPrevious]
   );
 
   const backdropVariants = {
@@ -78,10 +79,11 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ images, onClose }) => {
             <IoCloseOutline size={24} />
           </button>
 
-          <img
+          <LazyImage
             src={images[currentIndex]}
             alt={`Project detail ${currentIndex + 1}`}
-            className="w-full h-auto object-contain max-h-[80vh] rounded-lg"
+            className="w-full h-auto max-h-[80vh] rounded-lg"
+            placeholderColor="#000000"
           />
 
           <div className="absolute inset-x-0 bottom-4 flex justify-center items-center gap-4">
