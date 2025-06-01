@@ -3,9 +3,6 @@
   command = "pnpm run build"
   publish = "dist"
 
-[[plugins]]
-  package = "@netlify/plugin-lighthouse"
-
 [build.environment]
   NODE_VERSION = "18"
 
@@ -13,6 +10,25 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Headers for better SEO
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Content-Type = "text/plain"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml"
 
 # Enable prerendering
 [build.processing]
