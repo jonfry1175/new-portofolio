@@ -148,7 +148,7 @@ export const PROJECTS: Project[] = [
     image: project5,
     detailImages: [],
     description:
-      "Designed and developed a modern portfolio website to showcase professional projects and technical skills. Features responsive design and interactive components for optimal user engagement.",
+      "Designed and developed a modern portfolio website to showcase professional projects and technical skills. Features responsive design and interactive components for optimal user engagement. Implemented comprehensive SEO optimization including meta tags, structured data, and performance enhancements to improve search engine visibility.",
     technologies: ["Typescript", "React", "Tailwind"],
     demo: "https://jonfry.netlify.app/",
     src: "https://github.com/jonfry1175/new-portofolio",
