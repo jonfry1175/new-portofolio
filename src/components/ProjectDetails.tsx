@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import {
   IoChevronBackOutline,
@@ -24,6 +24,19 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ images, onClose }) => {
     );
   };
 
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+      } else if (e.key === "ArrowRight" && images.length > 1) {
+        goToNext();
+      } else if (e.key === "ArrowLeft" && images.length > 1) {
+        goToPrevious();
+      }
+    },
+    [images.length, onClose]
+  );
+
   const backdropVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
@@ -33,6 +46,16 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ images, onClose }) => {
     hidden: { opacity: 0, scale: 0.9 },
     visible: { opacity: 1, scale: 1, transition: { delay: 0.1 } },
   };
+
+  useEffect(() => {
+    // Add event listener when component mounts
+    document.addEventListener("keydown", handleKeyDown);
+
+    // Remove event listener when component unmounts
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
 
   return (
     <motion.div

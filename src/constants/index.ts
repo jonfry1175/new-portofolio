@@ -11,6 +11,7 @@ import iot4 from "../assets/projects/iot/cuttinf_time.png";
 import iot5 from "../assets/projects/iot/table_cutting.png";
 import iot6 from "../assets/projects/iot/next_proccess.png";
 import iot7 from "../assets/projects/iot/settings.png";
+import iot8 from "../assets/projects/iot/login.png";
 
 export interface Experience {
   year: string;
@@ -31,6 +32,7 @@ export interface Project {
   detailImages: string[];
   isDesktop?: boolean;
   src?: string;
+  isPrivate?: boolean;
   isMobileImage: boolean;
 }
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 1 year of hands-on experience, I have honed my skills in front-end technologies like React and Vue, as well as back-end technologies like Node.js, Express.js, and PostgreSQL. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
@@ -87,8 +89,9 @@ export const PROJECTS: Project[] = [
   {
     title: "IOT Dashboard Monitoring",
     isMobileImage: false,
+    isPrivate: true,
     image: iot1,
-    detailImages: [iot1, iot2, iot3, iot4, iot5, iot6, iot7],
+    detailImages: [iot1, iot2, iot3, iot4, iot5, iot6, iot7, iot8],
     isDesktop: true,
     description:
       "Developed an IoT dashboard monitoring system for CNC machines as a solo developer. Implemented real-time file transfer capabilities between web interface and CNC machines. Built a full-stack solution utilizing modern technologies and protocols for efficient machine communication and monitoring.",

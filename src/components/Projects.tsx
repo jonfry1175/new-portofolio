@@ -64,7 +64,9 @@ const Projects: React.FC = () => {
               <div
                 className={`overflow-hidden rounded-lg ${
                   !project.isMobileImage ? "w-full" : "w-auto"
-                } relative group`}
+                } relative group ${
+                  project.detailImages.length > 0 ? "cursor-pointer" : ""
+                }`}
                 onClick={() => handleImageClick(project)}
               >
                 <img
@@ -78,6 +80,8 @@ const Projects: React.FC = () => {
                   style={{
                     border: !project.isMobileImage ? "1px solid #333" : "none",
                     maxWidth: project.isMobileImage ? "220px" : "100%",
+                    cursor:
+                      project.detailImages.length > 0 ? "pointer" : "default",
                   }}
                 />
                 {project.detailImages.length > 0 && (
@@ -135,6 +139,11 @@ const Projects: React.FC = () => {
                   >
                     Source Code
                   </a>
+                )}
+                {project.isPrivate && (
+                  <span className="rounded-md border border-neutral-700 bg-neutral-900 px-5 py-2 text-sm font-medium text-red-500 hover:bg-neutral-800 transition-colors cursor-not-allowed">
+                    Private Project
+                  </span>
                 )}
               </div>
             </motion.div>
