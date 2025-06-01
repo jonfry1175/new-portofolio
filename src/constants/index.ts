@@ -1,8 +1,16 @@
-import project1 from "../assets/projects/defect.png";
+import defect1 from "../assets/projects/defect_detect/defect.png";
+import defect2 from "../assets/projects/defect_detect/defect_create.png";
 import project2 from "../assets/projects/project-enigma.png";
 import project5 from "../assets/projects/project-porto.png";
-import project7 from "../assets/projects/janji-temu/image.png";
-import runningTime from "../assets/projects/iot/running_time.png";
+import janjiTemu1 from "../assets/projects/janji-temu/image.png";
+import janjiTemu2 from "../assets/projects/janji-temu/image copy.png";
+import iot1 from "../assets/projects/iot/running_time.png";
+import iot2 from "../assets/projects/iot/timeline.png";
+import iot3 from "../assets/projects/iot/transfer_file.png";
+import iot4 from "../assets/projects/iot/cuttinf_time.png";
+import iot5 from "../assets/projects/iot/table_cutting.png";
+import iot6 from "../assets/projects/iot/next_proccess.png";
+import iot7 from "../assets/projects/iot/settings.png";
 
 export interface Experience {
   year: string;
@@ -20,6 +28,7 @@ export interface Project {
   github?: string;
   demo?: string;
   technologies: string[];
+  detailImages: string[];
   isDesktop?: boolean;
   src?: string;
   isMobileImage: boolean;
@@ -78,7 +87,8 @@ export const PROJECTS: Project[] = [
   {
     title: "IOT Dashboard Monitoring",
     isMobileImage: false,
-    image: runningTime,
+    image: iot1,
+    detailImages: [iot1, iot2, iot3, iot4, iot5, iot6, iot7],
     isDesktop: true,
     description:
       "Developed an IoT dashboard monitoring system for CNC machines as a solo developer. Implemented real-time file transfer capabilities between web interface and CNC machines. Built a full-stack solution utilizing modern technologies and protocols for efficient machine communication and monitoring.",
@@ -98,25 +108,20 @@ export const PROJECTS: Project[] = [
   {
     title: "Janji Temu Website",
     isMobileImage: false,
-    image: project7,
+    image: janjiTemu1,
+    detailImages: [janjiTemu1, janjiTemu2],
     isDesktop: true,
     description:
       "Developed a full-stack appointment scheduling platform using modern web technologies. The system enables users to efficiently manage and schedule appointments with automated confirmation and reminder features.",
-    technologies: [
-      "Typescript",
-      "Express",
-      "PostgreSQL",
-      "React",
-      "Tailwind",
-      "Cypress",
-    ],
+    technologies: ["Typescript", "Express", "PostgreSQL", "React", "Tailwind"],
     demo: undefined,
     src: "https://github.com/jonfry1175/test-fullstack-healmity",
   },
   {
     title: "DefectDetect Website",
     isMobileImage: false,
-    image: project1,
+    image: defect1,
+    detailImages: [defect1, defect2],
     description:
       "Built a comprehensive bug tracking system with role-based access control. QA teams can report and monitor bugs, while developers can manage and update bug statuses. Implemented secure authentication using JWT and modern frontend technologies for optimal user experience.",
     technologies: ["Javascript", "Express", "PostgreSQL", "React", "Bootstrap"],
@@ -127,6 +132,7 @@ export const PROJECTS: Project[] = [
     title: "Laundry Management Website",
     isMobileImage: true,
     image: project2,
+    detailImages: [],
     description:
       "Developed a laundry management system to streamline business operations. Features include transaction management, service catalog maintenance, and comprehensive reporting tools for business analytics.",
     technologies: ["JavaScript", "React", "Bootstrap"],
@@ -137,6 +143,7 @@ export const PROJECTS: Project[] = [
     title: "Portfolio Website",
     isMobileImage: true,
     image: project5,
+    detailImages: [],
     description:
       "Designed and developed a modern portfolio website to showcase professional projects and technical skills. Features responsive design and interactive components for optimal user engagement.",
     technologies: ["Typescript", "React", "Tailwind"],

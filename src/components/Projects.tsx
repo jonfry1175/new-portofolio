@@ -1,7 +1,14 @@
 import { PROJECTS, Project as ProjectType } from "../constants";
 import { motion, Variants } from "framer-motion";
+import React, { useState } from "react";
+import ProjectDetails from "./ProjectDetails";
 
 const Projects: React.FC = () => {
+  const [showDetails, setShowDetails] = useState(false);
+  const [currentProject, setCurrentProject] = useState<ProjectType | null>(
+    null
+  );
+
   const containerVariants: Variants = {
     hidden: { y: -100, opacity: 0 },
     visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
@@ -11,6 +18,18 @@ const Projects: React.FC = () => {
     hiddenLeft: { x: -100, opacity: 0 },
     hiddenRight: { x: 100, opacity: 0 },
     visible: { x: 0, opacity: 1, transition: { duration: 1 } },
+  };
+
+  const handleImageClick = (project: ProjectType) => {
+    if (project.detailImages.length > 0) {
+      setCurrentProject(project);
+      setShowDetails(true);
+    }
+  };
+
+  const closeDetails = () => {
+    setShowDetails(false);
+    setCurrentProject(null);
   };
 
   return (
@@ -45,7 +64,8 @@ const Projects: React.FC = () => {
               <div
                 className={`overflow-hidden rounded-lg ${
                   !project.isMobileImage ? "w-full" : "w-auto"
-                }`}
+                } relative group`}
+                onClick={() => handleImageClick(project)}
               >
                 <img
                   src={project.image}
@@ -54,12 +74,19 @@ const Projects: React.FC = () => {
                     project.isMobileImage
                       ? "max-h-[400px] object-contain"
                       : "w-full object-cover shadow-lg"
-                  }`}
+                  } ${project.detailImages.length > 0 ? "cursor-pointer" : ""}`}
                   style={{
                     border: !project.isMobileImage ? "1px solid #333" : "none",
                     maxWidth: project.isMobileImage ? "220px" : "100%",
                   }}
                 />
+                {project.detailImages.length > 0 && (
+                  <div className="absolute inset-0 bg-black/70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white font-medium text-lg">
+                      View Details
+                    </span>
+                  </div>
+                )}
               </div>
             </motion.div>
 
@@ -114,6 +141,13 @@ const Projects: React.FC = () => {
           </div>
         ))}
       </div>
+
+      {showDetails && currentProject && (
+        <ProjectDetails
+          images={currentProject.detailImages}
+          onClose={closeDetails}
+        />
+      )}
     </div>
   );
 };
