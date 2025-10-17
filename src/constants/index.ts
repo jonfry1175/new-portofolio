@@ -1,9 +1,10 @@
-import defect1 from "../assets/projects/defect_detect/defect.png";
-import defect2 from "../assets/projects/defect_detect/defect_create.png";
-import project2 from "../assets/projects/project-enigma.png";
-import project5 from "../assets/projects/project-porto.png";
-import janjiTemu1 from "../assets/projects/janji-temu/image.png";
-import janjiTemu2 from "../assets/projects/janji-temu/image copy.png";
+// Imports for projects currently hidden. Uncomment if those projects are shown again.
+// import defect1 from "../assets/projects/defect_detect/defect.png";
+// import defect2 from "../assets/projects/defect_detect/defect_create.png";
+// import project2 from "../assets/projects/project-enigma.png";
+// import project5 from "../assets/projects/project-porto.png";
+// import janjiTemu1 from "../assets/projects/janji-temu/image.png";
+// import janjiTemu2 from "../assets/projects/janji-temu/image copy.png";
 import iot1 from "../assets/projects/iot/running_time.png";
 import iot2 from "../assets/projects/iot/timeline.png";
 import iot3 from "../assets/projects/iot/transfer_file.png";
@@ -108,6 +109,8 @@ export const PROJECTS: Project[] = [
     demo: "",
     src: "",
   },
+  // The following projects are temporarily hidden. Uncomment to show them again.
+  /*
   {
     title: "Janji Temu Website",
     isMobileImage: false,
@@ -120,6 +123,7 @@ export const PROJECTS: Project[] = [
     demo: undefined,
     src: "https://github.com/jonfry1175/test-fullstack-healmity",
   },
+
   {
     title: "DefectDetect Website",
     isMobileImage: false,
@@ -131,6 +135,7 @@ export const PROJECTS: Project[] = [
     demo: "https://defect-detect.vercel.app",
     src: "https://github.com/jonfry1175/DefectDetect",
   },
+
   {
     title: "Laundry Management Website",
     isMobileImage: true,
@@ -142,6 +147,7 @@ export const PROJECTS: Project[] = [
     demo: "https://jonfry-laundry-app.netlify.app/",
     src: "https://github.com/jonfry1175/enigma-laundry",
   },
+
   {
     title: "Portfolio Website",
     isMobileImage: true,
@@ -153,6 +159,7 @@ export const PROJECTS: Project[] = [
     demo: "https://jonfry.netlify.app/",
     src: "https://github.com/jonfry1175/new-portofolio",
   },
+  */
 ];
 
 export const CONTACT = {
